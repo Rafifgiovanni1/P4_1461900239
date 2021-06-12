@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\controllers\BukuController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('Buku0239',BukuController::class);
+Route::get('/Buku/export', 'App\Http\Controllers\BukuController@export');
